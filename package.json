@@ -1,0 +1,28 @@
+{
+  "name": "api-communication",
+  "version": "1.0.0",
+  "description": "Comunicação com a API do Estacionamento",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "clear",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurSampaio15/api-communication.git"
+  },
+  "author": "Arthur Sampaio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurSampaio15/api-communication/issues"
+  },
+  "homepage": "https://github.com/ArthurSampaio15/api-communication#readme",
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
