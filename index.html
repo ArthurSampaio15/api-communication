@@ -18,23 +18,37 @@
 
     </form>
     <br>
-    <div id="result"></div>
+    <div id="resultadoInserir"></div>
     <br><br>
     <div id="cars"></div>
     <input type="button" value="Mostrar carros" id="btMostrar">
     <br><br><br>
 
     <form id="carro">
+        <h1>Consultar</h1><br>
         <label for="carro">Digite a placa do carro</label>
         <input type="text" name="plates" id="plates">
 
         <button type="submit" id="">Enviar</button>
+        <button type="reset">Desaparecer</button>
     </form>
     <br>
-    <div id="resultado"></div>
+    <div id="resultadoConsulta"></div>
+
+    <br><br><br>
+    <form id="del">
+        <h1>Deletar</h1><br>
+        <label for="carro">Digite a placa do carro</label>
+        <input type="text" name="delete" id="delete">
+
+        <button type="submit">Enviar</button>
+    </form>
+    <br><br>
+    <div id="resultadoDeletar"></div>
 
     <script src="post.js" type="module" crossorigin></script>
     <script src="active.js" type="module" crossorigin></script>
     <script src="check.js" type="module" crossorigin></script>
+    <script src="delete.js" type="module" crossorigin></script>
 </body>
 </html>

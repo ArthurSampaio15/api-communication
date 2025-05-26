@@ -1,5 +1,4 @@
 import axios from "axios";
-const plates = document.getElementById("plates");
 
 const urlCheck = `http://cnms-parking-api.net.uztec.com.br/api/v1/check/ABC-1111`;
 
@@ -9,10 +8,10 @@ document.getElementById("carro").addEventListener("submit", function(event) {
     const plate = document.getElementById("plates");
     axios.get(urlCheck, plate)
     .then(response=>{
-        document.getElementById("resultado").textContent ="Carro disponível";
+        document.getElementById("resultadoConsulta").textContent ="Carro disponível";
     })
     .catch(error=>{
-        document.getElementById("resultado").textContent ="Erro!";
+        document.getElementById("resultadoConsulta").textContent ="Erro!";
         console.error(error, "Erro inesperado");
     })
 

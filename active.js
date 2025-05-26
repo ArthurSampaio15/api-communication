@@ -6,15 +6,46 @@ const mostraCarros = document.getElementById("cars");
 
 async function getRepos()
 {
-    axios.get(urlActive)
-    .then(response => {
-        mostraCarros.innerHTML = 
-        `<h1>Dados dos carros: </h1>"
-             "<h3>"${JSON.stringify(response.data)}"</h3>"`;
-    })
-    .catch(error => {
-        console.error(error, "Erro ao buscar o usuário");
-    });
+    try{
+        const response = await axios.get(urlActive);
+        
+        let contentHTML = "<h1>Dados dos carros</h1>"
+
+        if(Array.isArray(response.data) && response.data.length > 0){
+            contentHTML += `
+                <table border="1" style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Hora de Entrada</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            response.data.forEach(carro => {
+                contentHTML += `
+                <tr>
+                    <td>${carro.plate || "Vazio"}</td>
+                    <td>${carro.model || "Vazio"}</td>
+                    <td>${new Date(carro.entrytime).toLocaleDateString() || "Vazio"}</td>
+                </tr>
+                `;
+            });
+            contentHTML += `
+            </tbody>
+            </table>`; 
+        }
+        else{
+            contentHTML = "<h1>Nenhum carro está estacionado</h1>"
+        }
+        mostraCarros.innerHTML = contentHTML;
+    }
+    catch (error){
+        console.error("Erro ao localizar carros estacionados", error);
+        mostraCarros.innerHTML = '<p style="color: red;">Erro ao localizar os carros no estacionamento, tente novamente mais tarde</p>';
+    }
 }
 
 const btMostrar = document.getElementById("btMostrar");
