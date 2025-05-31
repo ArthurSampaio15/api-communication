@@ -7,24 +7,24 @@
 </head>
 <body>
     <h1>Envio do carro</h1>
-    <form id="car">
+    <form id="formPostCarro">
         <label for="model">Digite o modelo</label>
-        <input type="text" name="model" id="model"><br><br>
+        <input type="text" name="modelPost" id="modelPost"><br><br>
 
         <label for="plate">Digite a placa</label>
-        <input type="text" name="plate" id="plate">
+        <input type="text" name="platePost" id="platePost">
 
         <button type="submit" id="">Enviar</button>
 
     </form>
     <br>
-    <div id="resultadoInserir"></div>
+    <div id="resultPost"></div>
     <br><br>
-    <div id="cars"></div>
+    <div id="resultActive"></div>
     <input type="button" value="Mostrar carros" id="btMostrar">
     <br><br><br>
 
-    <form id="carro">
+    <form id="formCarro">
         <h1>Consultar</h1><br>
         <label for="carro">Digite a placa do carro</label>
         <input type="text" name="plates" id="plates">
@@ -33,10 +33,10 @@
         <button type="reset">Desaparecer</button>
     </form>
     <br>
-    <div id="resultadoConsulta"></div>
+    <div id="resultCheck"></div>
 
     <br><br><br>
-    <form id="del">
+    <form id="formDelete">
         <h1>Deletar</h1><br>
         <label for="carro">Digite a placa do carro</label>
         <input type="text" name="delete" id="delete">
@@ -44,11 +44,49 @@
         <button type="submit">Enviar</button>
     </form>
     <br><br>
-    <div id="resultadoDeletar"></div>
+    <div id="resultDelete"></div>
+
+    <br><br><br>
+    <form id="formTime">
+        <h1>Tempo de permanência</h1><br>
+        <label for="carro">Digite a placa do carro</label>
+        <input type="text" name="plateTime" id="plateTime">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="resultTime"></div>
+    <br><br><br>
+    <form id="formUpdate">
+        <h1>Atualizar carro</h1>
+        <label for="carro">Digite a placa do carro</label>
+        <input type="text" name="plateOld" id="plateOld">
+        <br>
+        <label for="novoCarro">Digite a nova placa do carro</label>
+        <input type="text" name="plateUpdate" id="plateUpdate">
+        <br>
+        <label for="novoCarros">Digite o novo modelo do carro</label>
+        <input type="text" name="modelUpdate" id="modelUpdate">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="resultUpdate"></div>
+    <br><br><br>
+    <div id="resultReport"></div>
+    <input type="submit" value="Relatório" id="btReport">
+    <br><br><br>
+    <div id="resultSlots"></div>
+    <input type="button" value="Vagas" id="btSlots">
+
 
     <script src="post.js" type="module" crossorigin></script>
     <script src="active.js" type="module" crossorigin></script>
     <script src="check.js" type="module" crossorigin></script>
     <script src="delete.js" type="module" crossorigin></script>
+    <script src="time.js" type="module" crossorigin></script>
+    <script src="update.js" type="module" crossorigin></script>
+    <script src="report.js" type="module" crossorigin></script>
+    <script src="slots.js" type="module" crossorigin></script>
 </body>
 </html>

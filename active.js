@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const urlActive = "http://cnms-parking-api.net.uztec.com.br/api/v1/active";
-const mostraCarros = document.getElementById("cars");
+const mostraCarros = document.getElementById("resultActive");
 
 
 async function getRepos()
@@ -29,7 +29,9 @@ async function getRepos()
                 <tr>
                     <td>${carro.plate || "Vazio"}</td>
                     <td>${carro.model || "Vazio"}</td>
-                    <td>${new Date(carro.entrytime).toLocaleDateString() || "Vazio"}</td>
+                    <td>${carro.entryTime && !isNaN(new Date(carro.entryTime)) 
+                        ? new Date(carro.entryTime).toLocaleString()
+                        : "Vazio"}</td>
                 </tr>
                 `;
             });
