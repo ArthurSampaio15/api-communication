@@ -1,0 +1,32 @@
+body{
+    background-image: url("../IMG/cozy_cone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    background-color: aqua;
+    padding: 10px 40% 10px 40%;
+    margin: 0%;
+    text-align: center;
+}
+.botao{
+    border-radius: 25px;
+    background-color: aqua;
+    padding: 20px;
+    
+}
+.botaoVoltar{
+    position: absolute;
+    right: 96%;
+    top: 2%;
+}
+.link{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+}
