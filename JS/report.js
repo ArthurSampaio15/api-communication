@@ -8,19 +8,15 @@ export async function getReport()
     try {
         const response = await axios.get(urlReport);
 
-        // Assumimos que response.data é um objeto contendo todas as métricas do relatório.
         const reportData = response.data;
 
-        // Verifica se reportData é um objeto e não é nulo
         if (typeof reportData === 'object' && reportData !== null) {
-            // Acessa as propriedades diretamente do objeto reportData
-            const reportDate = reportData.date || "N/A"; // Use 'date' ou 'reportDate' dependendo da API
+            const reportDate = reportData.date || "N/A"; 
             const totalEntries = reportData.totalEntries || 0;
             const totalExits = reportData.totalExits || 0;
             const currentVehicles = reportData.currentVehicles || 0;
-            const totalRevenue = reportData.totalRevenue || 0; // Formata para 2 casas decimais
+            const totalRevenue = reportData.totalRevenue || 0;
 
-            // Monta o HTML para exibir todas as informações do relatório
             showResult.innerHTML = `
                 <h2>Relatório do Estacionamento</h2>
                 <p>Data: <strong>${reportDate}</strong></p>
@@ -30,13 +26,11 @@ export async function getReport()
                 <p>Receita Total: <strong>R$ ${totalRevenue}</strong></p>
             `;
         } else {
-            // Caso a resposta da API não seja um objeto como esperado
             showResult.innerHTML = "Erro: Formato de relatório inesperado da API.";
             console.error("Formato inesperado do relatório:", reportData);
         }
 
     } catch (error) {
-        // Tratamento de erro aprimorado
         let message = "Erro ao carregar o relatório!";
         if (error.response) {
             message += ` Status: ${error.response.status}. Mensagem: ${error.response.data ? (error.response.data.message || JSON.stringify(error.response.data)) : 'N/A'}`;

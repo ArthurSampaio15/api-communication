@@ -1,23 +1,28 @@
 body{
-    background-image: url("../IMG/cozy_cone.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--laranja);
 }
 header{
     display: flex;
     justify-content: center;
 }
 .titulo{
-    background-color: aqua;
+    background-color: var(--marrom);
     padding: 10px 40% 10px 40%;
     margin: 0%;
     text-align: center;
 }
 .botao{
     border-radius: 25px;
-    background-color: aqua;
-    padding: 20px;
-    
+    background-color: var(--claro);
+    height: 60px;
+    width: 200px;
+    border: 2px solid var(--preto);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: 5px 5px var(--sombra);
 }
 .botaoVoltar{
     position: absolute;
@@ -26,7 +31,20 @@ header{
 }
 .link{
     text-decoration: none;
-    display: flex;
-    justify-content: center;
+    color: var(--preto);
+    display: block;
+    flex-wrap: wrap;
+    gap: 100px;
     padding: 1px;
+}
+
+
+
+:root{
+    --marrom: #8d5e41;
+    --laranja: #f7be65;
+    --claro: #ffdfc0;
+    --vermelho: #bf6d60;
+    --preto: #2f2935;
+    --sombra: #2f2935a5;
 }

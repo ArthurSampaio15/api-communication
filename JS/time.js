@@ -1,4 +1,5 @@
 import axios from "axios";
+import moment from "moment";
 
 const urlTime = "http://cnms-parking-api.net.uztec.com.br/api/v1/time/"
 
@@ -8,10 +9,13 @@ document.getElementById("formTime").addEventListener("submit", function(event){
     var url = `http://cnms-parking-api.net.uztec.com.br/api/v1/time/${plateToTime}`;
     axios.get(url)
     .then(response =>{
-        const carro = response.data;
-        document.getElementById("resultTime").textContent = `Tempo do carro: ${carro.parkedTime && !isNaN(new Date(carro.parkedTime)) 
-                                                                                ? new Date(carro.parkedTime).toLocaleTimeString()
-                                                                                : "Vazio"}`;
+        const time = response.data.parkedTime;
+        const duracao = moment.duration(time, "minutes");
+        const timePres = duracao.asMilliseconds();
+        const formatHour = moment.utc(timePres).format("HH");
+        const formatMinute = moment.utc(timePres).format("mm");
+        const formatSecond = moment.utc(timePres).format("ss");
+        document.getElementById("resultTime").textContent = `Tempo de permanência: ${formatHour} horas ${formatMinute} minutos e ${formatSecond} segundos`;
     })
     .catch(error =>{
         if(error.status  = 404)
