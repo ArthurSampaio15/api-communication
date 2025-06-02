@@ -52,6 +52,3 @@ export async function getCars()
 
 const btMostrar = document.getElementById("btMostrar");
 btMostrar.addEventListener("click", getCars);
-// document.addEventListener('DOMContentLoaded',  () => {
-//     getCars();
-// });
