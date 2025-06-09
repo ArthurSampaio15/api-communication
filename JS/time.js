@@ -12,10 +12,12 @@ document.getElementById("formTime").addEventListener("submit", function(event){
         const time = response.data.parkedTime;
         const duracao = moment.duration(time, "minutes");
         const timePres = duracao.asMilliseconds();
+        console.log(timePres);
+        const formatDay = moment.utc(timePres).format("DD")
         const formatHour = moment.utc(timePres).format("HH");
         const formatMinute = moment.utc(timePres).format("mm");
         const formatSecond = moment.utc(timePres).format("ss");
-        document.getElementById("resultTime").textContent = `Tempo de permanência: ${formatHour} horas ${formatMinute} minutos e ${formatSecond} segundos`;
+        document.getElementById("resultTime").textContent = `Tempo de permanência: ${formatDay} ${formatHour} horas ${formatMinute} minutos e ${formatSecond} segundos`;
     })
     .catch(error =>{
         if(error.status  = 404)

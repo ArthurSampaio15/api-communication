@@ -20,7 +20,7 @@ async function getReport() {
                 showSlots.innerHTML = "Não foi possível determinar o número de vagas.";
                 return; 
             }
-            showSlots.innerHTML = `Vagas disponíveis: <strong>${avaibleSlots}</strong>`;
+            showSlots.innerHTML = `<p style="font-size: 50px;">Vagas disponíveis: <strong style="color: red;">${avaibleSlots}</strong></p>`;
         })
         
 

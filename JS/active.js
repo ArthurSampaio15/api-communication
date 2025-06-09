@@ -13,7 +13,7 @@ export async function getCars()
 
         if(Array.isArray(response.data) && response.data.length > 0){
             contentHTML += `
-                <table border="1" style="width:100%; border-collapse: collapse;">
+                <table border="1" style="width:100%; border-collapse: collapse; background-color: var(--marrom); color: white; text-shadow: 2px 2px var(--sombra); border: 2px solid var(--preto);">
                 <thead>
                     <tr>
                     <th>Placa</th>

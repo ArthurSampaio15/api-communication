@@ -1,19 +1,29 @@
 body{
     background-color: var(--laranja);
+    margin: 0px;
+    padding: 0px;
 }
 header{
     display: flex;
     justify-content: center;
+    background-color: var(--marrom);
 }
 .titulo{
-    background-color: var(--marrom);
     height: 100px;
     width: 100000px;
+    color: white;
     margin: 0%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 70px;
+}.conteudo{
+    display: flex;
+}
+.tituloConteudo{
+    text-align: center;
+    font-size: 50px;
 }
 .sobre{
     position: absolute;
@@ -34,6 +44,8 @@ header{
 }
 .botao:hover{
     background-color: var(--laranja-escuro);
+    color: white;
+    text-shadow: 2px 2px var(--sombra);
 }
 .botaoVoltar{
     border-radius: 25px;
@@ -46,6 +58,11 @@ header{
     box-shadow: 5px 5px var(--sombra);
     text-decoration: none;
     position: absolute;
+}
+#botaoPosition{
+    position: relative;
+    bottom: 80px;
+    left: 13%;
 }
 .link{
     text-decoration: none;
@@ -61,17 +78,45 @@ header{
     position: absolute;
     right: 87%;
 }
-.textoSobre{
-    background-color: var(--marrom);
-    margin: 100px;
-    width: 300px;
-    height: 300px;
-}
 .sobreConjunto{
-    display: flex;
-    justify-content: center;
+    background-color: var(--marrom);
 }
-
+.textoSobre{
+    margin: 5%;
+    width: 30%;
+    height: 50%;
+    text-align: justify;
+    padding-top: 3%;
+    border-radius: 25px;
+}
+.texto{
+    color: white; 
+    text-shadow: 2px 2px var(--sombra);
+}
+.imagem{
+    position: absolute;
+    top: 30%;
+    left: 47%;
+    height: 500px;
+    width: 900px;
+    border-radius: 25px;
+    box-shadow: 15px 15px 5px 12px var(--sombra);
+    border: 10px double var(--preto);
+}
+#imagemSobre{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 60px;
+}
+.imagemInicial{
+    position: absolute;
+    left: 30%;
+    bottom: 0%;
+    border-radius: 25px;
+    box-shadow: 30px 30px 12px 5px var(--sombra);
+    border: 10px double var(--preto);
+}
 :root{
     --marrom: #8d5e41;
     --laranja: #f7be65;
