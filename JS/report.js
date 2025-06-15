@@ -19,11 +19,11 @@ export async function getReport()
 
             showResult.innerHTML = `
                 <h2>Relatório do Estacionamento</h2>
-                <p>Data: <strong>${reportDate}</strong></p>
-                <p>Total de Entradas: <strong>${totalEntries}</strong></p>
-                <p>Total de Saídas: <strong>${totalExits}</strong></p>
-                <p>Veículos Atualmente no Pátio: <strong>${currentVehicles}</strong></p>
-                <p>Receita Total: <strong>R$ ${totalRevenue}</strong></p>
+                <p>Data: <strong style="font-family: Arial;">${reportDate}</strong></p>
+                <p>Total de Entradas: <strong style="font-family: Arial;">${totalEntries}</strong></p>
+                <p>Total de Saídas: <strong style="font-family: Arial;">${totalExits}</strong></p>
+                <p>Veículos Atualmente no Pátio: <strong style="font-family: Arial;">${currentVehicles}</strong></p>
+                <p>Receita Total: <strong style="font-family: Arial;">R$ ${totalRevenue}</strong></p>
             `;
         } else {
             showResult.innerHTML = "Erro: Formato de relatório inesperado da API.";

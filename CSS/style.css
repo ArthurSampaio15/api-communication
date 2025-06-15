@@ -1,128 +1,197 @@
-body{
-    background-color: var(--laranja);
-    margin: 0px;
-    padding: 0px;
+html {
+  background: linear-gradient(
+    45deg,
+    #e06536,
+    #e09e36,
+    #e08336,
+    #e13e2d,
+    #e0b336
+  );
+  font-family: "Roadstone";
+  height: 111%;
 }
-header{
-    display: flex;
-    justify-content: center;
-    background-color: var(--marrom);
+header {
+  display: flex;
+  justify-content: center;
+  background: var(--marrom);
 }
-.titulo{
-    height: 100px;
-    width: 100000px;
-    color: white;
-    margin: 0%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70px;
-}.conteudo{
-    display: flex;
+.title {
+  color: whitesmoke;
+  text-shadow: 4px 4px #f5f5f550;
+  margin: 0%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
 }
-.tituloConteudo{
-    text-align: center;
-    font-size: 50px;
+.content {
+  display: flex;
 }
-.sobre{
-    position: absolute;
-    left: 94%;
+.title-content {
+  text-align: center;
+  font-size: 50px;
 }
-.botao{
-    border-radius: 25px;
-    background-color: var(--claro);
-    height: 60px;
-    width: 200px;
-    border: 2px solid var(--preto);
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    box-shadow: 5px 5px var(--sombra);
+.about {
+  position: absolute;
+  left: 94%;
 }
-.botao:hover{
-    background-color: var(--laranja-escuro);
-    color: white;
-    text-shadow: 2px 2px var(--sombra);
+.form-content {
+  position: relative;
 }
-.botaoVoltar{
-    border-radius: 25px;
-    background-color: var(--claro);
-    height: 60px;
-    width: 50px;
-    border: 2px solid var(--preto);
-    text-align: center;
-    align-items: center;
-    box-shadow: 5px 5px var(--sombra);
-    text-decoration: none;
-    position: absolute;
+label {
+  color: black;
+  padding: 0 5px;
+  position: absolute;
+  transform: translate(-50%);
+  top: 30%;
+  left: 5em;
+  pointer-events: none;
+  transition: 1s;
 }
-#botaoPosition{
-    position: relative;
-    bottom: 80px;
-    left: 13%;
+input {
+  color: var(--preto);
+  text-shadow: 2px 2px #ffffff71;
+  border: 2px solid black;
+  background: transparent;
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  padding: 0 1rem;
+  outline: none;
 }
-.link{
-    text-decoration: none;
-    color: var(--preto);
-    display: block;
-    flex-wrap: wrap;
-    gap: 100px;
-    padding: 1px;
+input:focus ~ label,
+input:valid ~ label {
+  top: -3px;
+  background-color: #e79f63;
+  font-size: 0.7em;
 }
-.linkBotao{
-    text-decoration: none;
-    color: var(--preto);
-    position: absolute;
-    right: 87%;
+.result {
+  position: absolute;
+  text-align: center;
 }
-.sobreConjunto{
-    background-color: var(--marrom);
+.button {
+  border-radius: 25px;
+  background-color: var(--claro);
+  height: 60px;
+  width: 200px;
+  border: 2px solid var(--preto);
+  color: var(--preto);
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 5px 5px var(--sombra);
 }
-.textoSobre{
-    margin: 5%;
-    width: 30%;
-    height: 50%;
-    text-align: justify;
-    padding-top: 3%;
-    border-radius: 25px;
+.button:hover {
+  background-color: var(--laranja-escuro);
+  color: white;
+  text-shadow: 2px 2px var(--sombra);
 }
-.texto{
-    color: white; 
-    text-shadow: 2px 2px var(--sombra);
+#position-button1 {
+  position: relative;
+  bottom: 80px;
+  left: 13%;
 }
-.imagem{
-    position: absolute;
-    top: 30%;
-    left: 47%;
-    height: 500px;
-    width: 900px;
-    border-radius: 25px;
-    box-shadow: 15px 15px 5px 12px var(--sombra);
-    border: 10px double var(--preto);
+#position-button2 {
+  position: relative;
+  top: 25px;
+  left: 10%;
 }
-#imagemSobre{
-    height: 40px;
-    width: 40px;
-    position: relative;
-    left: 60px;
+.link {
+  text-decoration: none;
+  color: var(--preto);
+  display: block;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 1px;
 }
-.imagemInicial{
-    position: absolute;
-    left: 30%;
-    bottom: 0%;
-    border-radius: 25px;
-    box-shadow: 30px 30px 12px 5px var(--sombra);
-    border: 10px double var(--preto);
+.link-button {
+  text-decoration: none;
+  color: var(--preto);
+  position: absolute;
+  right: 87%;
 }
-:root{
-    --marrom: #8d5e41;
-    --laranja: #f7be65;
-    --claro: #ffdfc0;
-    --vermelho: #bf6d60;
-    --preto: #2f2935;
-    --sombra: #2f2935a5;
-    --laranja-escuro: #604a26;
+
+.glass {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 37px;
+  position: absolute;
+  left: 40%;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.glass-content {
+  position: absolute;
+}
+
+.glass::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.group {
+  background-color: var(--marrom);
+}
+.about-text {
+  margin: 5%;
+  width: 30%;
+  height: 50%;
+  text-align: justify;
+  padding-top: 3%;
+  border-radius: 25px;
+}
+.text {
+  color: white;
+  text-shadow: 2px 2px var(--sombra);
+}
+.image {
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  height: 500px;
+  width: 900px;
+  border-radius: 25px;
+  box-shadow: 15px 15px 5px 12px var(--sombra);
+  border: 10px double var(--preto);
+}
+#about-image {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 60px;
+}
+.initial-image {
+  position: absolute;
+  left: 30%;
+  bottom: 0%;
+  border-radius: 25px;
+  box-shadow: 30px 30px 12px 5px var(--sombra);
+  border: 10px double var(--preto);
+}
+:root {
+  --marrom: #915f3f;
+  --laranja: #f7be65;
+  --claro: #ffdfc0;
+  --vermelho: #bf6d60;
+  --preto: #2f2935;
+  --sombra: #2f2935a5;
+  --laranja-escuro: #604a26;
+}
+
+@font-face {
+  font-family: "Roadstone";
+  src: url(../FONT/ROADSTORE-Dafont.woff) format("woff");
 }

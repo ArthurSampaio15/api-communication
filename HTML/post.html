@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="../JS/post.js" crossorigin></script>
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<header>
-    <a href="../index.html" class="linkBotao"><div class="botao">Voltar</div></a>
-    <h1 class="titulo">Motel cozy cone</h1>
-</header>
-<body>
-    <h1 class="tituloConteudo">Registro do cliente</h1>
-    <form id="formPostCarro">
-        <label for="model">Digite o modelo</label>
-        <input type="text" name="modelPost" id="modelPost"><br><br>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <header>
+    <a href="../index.html" class="link-button">
+      <div class="button">Voltar</div>
+    </a>
+    <h1 class="title">Motel cozy cone</h1>
+  </header>
 
-        <label for="plate">Digite a placa</label>
-        <input type="text" name="platePost" id="platePost">
+  <body>
+    <h1 class="title-content">Registro do cliente</h1>
+    <div class="glass">
+      <div class="glass-content">
+        <form id="formPostCarro">
+          <div class="form-content">
+            <input type="text" name="modelPost" id="modelPost" required />
+            <label for="model">Digite o modelo</label>
+          </div>
 
-        <button type="submit" class="botao">Enviar</button>
-
-    </form>
-    <br>
-    <div id="resultPost"></div>
-</body>
+          <br /><br />
+          <div class="form-content">
+            <input type="text" name="platePost" id="platePost" required />
+            <label for="plate">Digite a placa</label>
+          </div>
+          <button type="submit" class="button" id="position-button2">
+            Enviar
+          </button>
+        </form>
+        <br />
+        <div id="resultPost" class="result"></div>
+      </div>
+    </div>
+  </body>
 </html>

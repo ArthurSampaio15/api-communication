@@ -12,16 +12,16 @@ document.getElementById("formDelete").addEventListener("submit", function(event)
     var url = urlDelete + plateToDelete
     axios.delete(url)
     .then(response =>{
-        document.getElementById("resultDelete").textContent = "<p style='color: green'>Item deletado com sucesso!</p>";
+        document.getElementById("resultDelete").innerHTML = "<p style='color: green'>Sucesso, cliente acabou de ser deletado do sistema</p>";
     })
     .catch(error =>{
         if(error.stauts = 404)
         {
-            document.getElementById("resultDelete").textContent = "Carro não encontrado'";
+            document.getElementById("resultDelete").innerHTML = "O cliente não está registrado no motel";
         }
         else
         {
-            document.getElementById("resultDelete").textContent = "<p style='color: red;>Erro ao deletar o item!</p>'";
+            document.getElementById("resultDelete").innerHTML = "Erro ao deletar o cliente, Ligue para <strong style='color: red; font-family: Arial;'>4002-8922</strong> para chamar o suporte";
             console.error(error);
         }
     })

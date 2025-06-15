@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="../JS/exit.js"></script>
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<header>
-    <a href="../index.html" class="linkBotao"><div class="botao">Voltar</div></a>
-    <h1 class="titulo">Motel cozy cone</h1>
-</header>
-<body>
-    <form action="" id="formExit">
-        <h1 class="tituloConteudo">Saída do cliente</h1>
-        <br>
-        <label for="exit">Digite a placa do carro que saiu</label>
-        <input type="text" name="plateExit" id="plateExit">
-        <br>
-        <button type="submit" class="botao">Confirmar</button>
-    </form>
-    <br>
-    <div id="resultExit"></div>
-</body>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <header>
+    <a href="../index.html" class="link-button"
+      ><div class="button">Voltar</div></a
+    >
+    <h1 class="title">Motel cozy cone</h1>
+  </header>
+  <body>
+    <h1 class="title-content">Saída do cliente</h1>
+    <div class="glass">
+      <div class="glass-content">
+        <form action="" id="formExit">
+          <div class="form-content">
+            <input type="text" name="plateExit" id="plateExit" required />
+            <label for="exit">Placa cliente</label>
+          </div>
+          <button type="submit" class="button" id="position-button2">
+            Confirmar
+          </button>
+        </form>
+        <div id="resultExit" class="result"></div>
+      </div>
+    </div>
+    <br />
+  </body>
 </html>

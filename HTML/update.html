@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="../JS/update.js" crossorigin></script>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css" />
     <title>Document</title>
-</head>
-<header>
-    <a href="../index.html" class="linkBotao"><div class="botao">Voltar</div></a>
-    <h1 class="titulo">Motel cozy cone</h1>
-</header>
-<body>
-    <form id="formUpdate">
-        <h1 class="tituloConteudo">Atualizar cliente</h1>
-        <label for="carro">Digite a placa do carro</label>
-        <input type="text" name="plateOld" id="plateOld">
-        <br>
-        <label for="novoCarro">Digite a nova placa do carro</label>
-        <input type="text" name="plateUpdate" id="plateUpdate">
-        <br>
-        <label for="novoCarros">Digite o novo modelo do carro</label>
-        <input type="text" name="modelUpdate" id="modelUpdate">
-        <br>
-        <button type="submit" class="botao">Enviar</button>
-    </form>
-    <br>
-    <div id="resultUpdate"></div>
-</body>
+  </head>
+  <header>
+    <a href="../index.html" class="link-button"
+      ><div class="button">Voltar</div></a
+    >
+    <h1 class="title">Motel cozy cone</h1>
+  </header>
+  <body>
+    <h1 class="title-content">Atualizar cliente</h1>
+    <div class="glass">
+      <div class="glass-content">
+        <form id="formUpdate">
+          <div class="form-content">
+            <input type="text" name="plateOld" id="plateOld" required />
+            <label for="carro">Placa Antiga</label>
+          </div>
+
+          <br />
+          <div class="form-content">
+            <input type="text" name="plateUpdate" id="plateUpdate" required />
+            <label for="novoCarro">Placa Nova</label>
+          </div>
+
+          <br />
+          <div class="form-content">
+            <input type="text" name="modelUpdate" id="modelUpdate" required />
+            <label for="novoCarros">Modelo Novo</label>
+          </div>
+
+          <br />
+          <button type="submit" class="button" id="position-button2">
+            Enviar
+          </button>
+        </form>
+        <div id="resultUpdate" class="result"></div>
+      </div>
+    </div>
+    <br />
+  </body>
 </html>

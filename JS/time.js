@@ -17,17 +17,17 @@ document.getElementById("formTime").addEventListener("submit", function(event){
         const formatHour = moment.utc(timePres).format("HH");
         const formatMinute = moment.utc(timePres).format("mm");
         const formatSecond = moment.utc(timePres).format("ss");
-        document.getElementById("resultTime").textContent = `Tempo de permanência: ${formatDay} ${formatHour} horas ${formatMinute} minutos e ${formatSecond} segundos`;
+        document.getElementById("resultTime").innerHTML = `<br><div style="font-size: 25px;">Tempo de permanência: <br><strong style="font-family: Arial;">${formatDay} Dias ${formatHour} horas ${formatMinute} minutos e ${formatSecond} segundos</strong></div>`;
     })
     .catch(error =>{
         if(error.status  = 404)
         {
-            document.getElementById("resultTime").textContent = "Carro não encontrado"
+            document.getElementById("resultTime").innerHTML = "Cliente não encontrado no motel"
         }
         else
         {
-            document.getElementById("resultTime").textContent = "Erro ao Verificar!";
-            console.log(error);
+            document.getElementById("resultTime").innerHTML = "Erro ao verificar o tempo de permanência do cliente, Ligue para <strong style='color: red; font-family: Arial;'>4002-8922</strong> para chamar o suporte";
+            console.log("Erro", error);
         }
     })
 })

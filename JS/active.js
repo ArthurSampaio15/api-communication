@@ -26,12 +26,12 @@ export async function getCars()
 
             response.data.forEach(carro => {
                 contentHTML += `
-                <tr>
-                    <td>${carro.plate || "Vazio"}</td>
-                    <td>${carro.model || "Vazio"}</td>
-                    <td>${carro.entryTime && !isNaN(new Date(carro.entryTime)) 
+                <tr style="font-family: Arial;">
+                    <td><b>${carro.plate || "Vazio"}</b></td>
+                    <td><b>${carro.model || "Vazio"}</b></td>
+                    <td><b>${carro.entryTime && !isNaN(new Date(carro.entryTime)) 
                         ? new Date(carro.entryTime).toLocaleString()
-                        : "Vazio"}</td>
+                        : "Vazio"}</b></td>
                 </tr>
                 `;
             });
@@ -46,7 +46,7 @@ export async function getCars()
     }
     catch (error){
         console.error("Erro ao localizar carros estacionados", error);
-        mostraCarros.innerHTML = '<p style="color: red;">Erro ao localizar os carros no estacionamento, tente novamente mais tarde</p>';
+        mostraCarros.innerHTML = '<p style="font-size: 25px;">Erro ao localizar os cliente, Ligue para <strong style="color: red; font-family: Arial;">4002-8922</strong> para chamar o suporte</p>';
     }
 }
 

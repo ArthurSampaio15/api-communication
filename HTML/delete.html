@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="../JS/delete.js"></script>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css" />
     <title>Document</title>
-</head>
-<header>
-    <a href="../index.html" class="linkBotao"><div class="botao">Voltar</div></a>
-    <h1 class="titulo">Motel cozy cone</h1>
-</header>
-<body>
-    <form id="formDelete">
-        <h1 class="tituloConteudo">Cancelar cliente</h1><br>
-        <label for="carro">Digite a placa do carro</label>
-        <input type="text" name="delete" id="delete">
-
-        <button type="submit" class="botao">Enviar</button>
-    </form>
-    <br><br>
-    <div id="resultDelete"></div>
-</body>
+  </head>
+  <header>
+    <a href="../index.html" class="link-button"
+      ><div class="button">Voltar</div></a
+    >
+    <h1 class="title">Motel cozy cone</h1>
+  </header>
+  <body>
+    <h1 class="title-content">Cancelar cliente</h1>
+    <div class="glass">
+      <div class="glass-content">
+        <form id="formDelete">
+          <div class="form-content">
+            <input type="text" name="delete" id="delete" required />
+            <label for="carro">Placa Cliente </label>
+          </div>
+          <button type="submit" class="button" id="position-button2">
+            Enviar
+          </button>
+        </form>
+        <br /><br />
+        <div id="resultDelete" class="result"></div>
+      </div>
+    </div>
+  </body>
 </html>

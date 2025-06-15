@@ -17,15 +17,15 @@ async function getReport() {
                 avaibleSlots = response.data.totalSlots - response.data.occupied;
             } else {
                 console.warn("Formato de resposta inesperado da API de vagas:", response.data);
-                showSlots.innerHTML = "Não foi possível determinar o número de vagas.";
+                showSlots.innerHTML = "Não foi possível determinar o número de quartos disponíveis.";
                 return; 
             }
-            showSlots.innerHTML = `<p style="font-size: 50px;">Vagas disponíveis: <strong style="color: red;">${avaibleSlots}</strong></p>`;
+            showSlots.innerHTML = `<p style="font-size: 50px;">Quantidade de quartos disponíveis: <strong style="color: red; font-family: Arial;">${avaibleSlots}</strong></p>`;
         })
         
 
     } catch (error) {
-        showSlots.innerHTML = "Erro ao carregar vagas!"; 
+        showSlots.innerHTML = "<p style='font-size: 40px;'>Erro ao verificar os quartos disponíveis, Ligue para <strong style='color: red; font-family: Arial;'>4002-8922</strong> para chamar o suporte</p>"; 
         console.error("Erro ao buscar vagas:", error); 
     }
 }

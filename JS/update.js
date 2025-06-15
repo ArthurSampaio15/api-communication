@@ -14,17 +14,17 @@ document.getElementById("formUpdate").addEventListener("submit", function(event)
     axios.put(url, newCar)
     .then(response =>{
         console.log(response.data);
-        document.getElementById("resultUpdate").textContent = "Atualizado com sucesso!";
+        document.getElementById("resultUpdate").innerHTML = "<p style='color: green;'>Informações do cliente atualizada com sucesso</p>";
     })
     .catch(error =>{
         if(error.status = 404)
         {
-            document.getElementById("resultUpdate").textContent ="Placa não encontrada!";
+            document.getElementById("resultUpdate").innerHTML ="Placa do cliente não encontrada!";
             console.error(error);
         }
         else
         {
-            document.getElementById("resultUpdate").textContent = "Erro!";
+            document.getElementById("resultUpdate").innerHTML = "Erro ao atualizar as informações do cliente, Ligue para <strong style='color: red; font-family: Arial;'>4002-8922</strong> para chamar o suporte";
             console.error(error);
         }
     })
