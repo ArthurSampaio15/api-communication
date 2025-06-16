@@ -17,13 +17,14 @@ export async function getReport()
             const currentVehicles = reportData.currentVehicles || 0;
             const totalRevenue = reportData.totalRevenue || 0;
 
-            showResult.innerHTML = `
+            showResult.innerHTML = `<div style="font-size: 30px;">
                 <h2>Relatório do Estacionamento</h2>
                 <p>Data: <strong style="font-family: Arial;">${reportDate}</strong></p>
                 <p>Total de Entradas: <strong style="font-family: Arial;">${totalEntries}</strong></p>
                 <p>Total de Saídas: <strong style="font-family: Arial;">${totalExits}</strong></p>
                 <p>Veículos Atualmente no Pátio: <strong style="font-family: Arial;">${currentVehicles}</strong></p>
                 <p>Receita Total: <strong style="font-family: Arial;">R$ ${totalRevenue}</strong></p>
+                </div>
             `;
         } else {
             showResult.innerHTML = "Erro: Formato de relatório inesperado da API.";

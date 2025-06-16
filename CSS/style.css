@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 html {
   background: linear-gradient(
     45deg,
@@ -18,7 +22,7 @@ header {
 .title {
   color: whitesmoke;
   text-shadow: 4px 4px #f5f5f550;
-  margin: 0%;
+  margin: 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -29,6 +33,7 @@ header {
   display: flex;
 }
 .title-content {
+  margin-top: 20px;
   text-align: center;
   font-size: 50px;
 }
@@ -36,6 +41,108 @@ header {
   position: absolute;
   left: 94%;
 }
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  position: relative;
+  top: 45px;
+  left: 600px;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+.hamburger {
+  display: block;
+  z-index: 2;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--marrom);
+  clip-path: circle(100px at 90% -15%);
+  transition: 1s ease-out;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.nav-list li:nth-child(1) a {
+  transition: 0.5s 0.2s;
+}
+
+.nav-list li:nth-child(2) a {
+  transition: 0.5s 0.4s;
+}
+
+.nav-list li:nth-child(3) a {
+  transition: 0.5s 0.6s;
+}
+
+/* Estilos ativos */
+
+.nav.active .nav-list {
+  clip-path: circle(3000px at 90% -15%);
+  pointer-events: all;
+}
+
+.nav.active .nav-list a {
+  opacity: 1;
+}
+
+.nav.active .hamburger {
+  position: fixed;
+  top: 26px;
+  right: 16px;
+  border-top-color: transparent;
+}
+
+.nav.active .hamburger::before {
+  transform: rotate(135deg);
+}
+
+.nav.active .hamburger::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
 .form-content {
   position: relative;
 }
@@ -81,10 +188,31 @@ input:valid ~ label {
   align-items: center;
   display: flex;
   justify-content: center;
+  padding: 2px;
   margin: 10px;
   box-shadow: 5px 5px var(--sombra);
 }
+
 .button:hover {
+  background-color: var(--laranja-escuro);
+  color: white;
+  text-shadow: 2px 2px var(--sombra);
+}
+.menu-button{
+  border-radius: 25px;
+  background-color: var(--claro);
+  height: 50px;
+  width: 150px;
+  border: 2px solid var(--preto);
+  color: var(--preto);
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  box-shadow: 5px 5px var(--sombra);
+}
+.menu-button:hover {
   background-color: var(--laranja-escuro);
   color: white;
   text-shadow: 2px 2px var(--sombra);
@@ -170,16 +298,16 @@ input:valid ~ label {
 #about-image {
   height: 40px;
   width: 40px;
+  top: 35px;
   position: relative;
-  left: 60px;
+  right: 1750px;
 }
 .initial-image {
   position: absolute;
-  left: 30%;
+  left: 20%;
   bottom: 0%;
   border-radius: 25px;
   box-shadow: 30px 30px 12px 5px var(--sombra);
-  border: 10px double var(--preto);
 }
 :root {
   --marrom: #915f3f;
